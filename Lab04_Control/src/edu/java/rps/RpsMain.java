@@ -17,14 +17,46 @@ public class RpsMain {
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
 		
-		System.out.println("1, 2, 3 중에 하나를 입력>>>");
+		System.out.println("가위/바위/보 게임");
+		System.out.println("[1] 가위");
+		System.out.println("[2] 바위");
+		System.out.println("[3] 보");
+		System.out.println("선택(1, 2, 3) >>>");
 		int user = sc.nextInt();
-		int computer = rand.nextInt(3) + 1;
-		int result = user - computer;
+		int computer = rand.nextInt(3) + 1;	
 		sc.close();
-		System.out.println("user = " + user + ", computer = " + computer);
 		
-		if (result == 1 || result == -2) {
+		String userChoice = "";
+		switch (user) {
+		case 1:
+			userChoice = "가위";
+			break;
+		case 2:
+			userChoice = "바위";
+			break;
+		case 3:
+			userChoice = "보";
+			break;
+		}
+		
+		String comChoice = "";
+		switch (computer) {
+		case 1:
+			comChoice = "가위";
+			break;
+		case 2:
+			comChoice = "바위";
+			break;
+		case 3:
+			comChoice = "보";
+			break;
+		}
+		
+		System.out.println("user:computer = " + user + ":" + computer);
+		System.out.println("user:computer = " + userChoice + ":" + comChoice);
+		
+		int result = user - computer;
+		if (result == 1 || result == -2) { 
 			System.out.println("사용자가 이겼습니다!");
 		} else if (result == 0) {
 			System.out.println("비겼습니다!");

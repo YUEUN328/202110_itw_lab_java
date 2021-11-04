@@ -16,13 +16,14 @@ public class VariableMain09 {
 		int javaScore = sc.nextInt();
 		int sqlScore = sc.nextInt();
 		int jspScore = sc.nextInt();
-		int threeScores = javaScore + sqlScore + jspScore;
+		int total = javaScore + sqlScore + jspScore;
+		double mean = total / 3.0;
 		
 		System.out.println("Java: " + javaScore);
 		System.out.println("SQL: " + sqlScore);
 		System.out.println("JSP: " + jspScore);
-		System.out.println("총점: " + threeScores);
-		System.out.println("평균: " + threeScores / 3.0);
+		System.out.println("총점: " + total);
+		System.out.println("평균: " + mean);
 		
 		sc.close(); 
 		System.out.println("프로그램 종료");

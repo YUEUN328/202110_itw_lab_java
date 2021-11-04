@@ -18,10 +18,11 @@ public class LoopMain08 {
 			...
 		 */
 		for (int dan = 1; dan < 13; dan++) {			
+			System.out.println(dan + "단");
 			for (int n = 1; n < 13; n++) {
 				System.out.println(dan + " x " + n + " = " + (dan * n));
-				if (dan == n) {
-					break;
+				if (dan == n) {  // 단과 곱해주는 숫자가 같은 경우 
+					break;       // 구구단 출력을 멈춤
 				}  // end if
 			}  // end for(n)
 			System.out.println("----------");
@@ -29,6 +30,7 @@ public class LoopMain08 {
 		
 		System.out.println("break를 사용하지 않는 방법");
 		for (int dan = 1; dan < 13; dan++) {
+			System.out.println(dan + "단");
 			for (int n = 1; n < 13; n++) {
 				if (dan >= n) {
 					System.out.println(dan + " x " + n + " = " + (dan * n));	

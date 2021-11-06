@@ -19,7 +19,7 @@ public class ArrayMain04 {
 		System.out.println(array[0][1]);  // 2
 		
 		// 2차원 배열의 원소의 개수:
-		//2차원 배열이 가지고 있는 1차원 배열의 개수
+		// 2차원 배열이 가지고 있는 1차원 배열의 개수
 		System.out.println(array.length);  
 		
 		// 2차원 배열의 첫번째 원소(1차원 배열)의 길이(원소 개수)

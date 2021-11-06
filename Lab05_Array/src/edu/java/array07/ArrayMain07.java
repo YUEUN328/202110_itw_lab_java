@@ -17,7 +17,7 @@ public class ArrayMain07 {
 			
 			boolean isSame = false;  // 배열에서 같은 숫자가 있으면 true로 바꿀 변수
 			for (int i = 0; i < count; i++) {
-				if (numbers[i] ==  r) {
+				if (numbers[i] == r) {
 					isSame = true;
 					break;  // for 문 종료
 				}

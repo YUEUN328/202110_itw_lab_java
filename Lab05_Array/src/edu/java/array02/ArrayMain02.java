@@ -5,7 +5,7 @@ public class ArrayMain02 {
 	public static void main(String[] args) {
 		// 배열의 선언과 초기화
 		// 타입[] 변수이름 = new 타입[배열의 원소 개수];
-		int[] intArray = new int[5];  // 배열을 생성하면 그 타입의 기본값(숫자인 경우 0 )으로 채워짐
+		int[] intArray = new int[5];  // 배열을 생성하면 그 타입의 기본값(숫자인 경우 0)으로 채워짐
 		
 		// 모든 배열에는 length 속성(그 배열이 가지고 있는 원소 개수)가 있음
 		for (int i = 0; i < intArray.length; i++) {

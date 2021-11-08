@@ -14,7 +14,7 @@ public class ArrayMain08 {
 		int sum = 0;  // 총점 변수를 선언
 		double avg;  // 평균
 		double dev;  // 편차
-		double devSqvSum = 0.0;  // 편차제곱합
+		double sumOfSquares = 0.0;  // 편차제곱합
 		double var;  // 분산
 		double std;  // 표준편차
 		int max;  // 최댓값
@@ -50,13 +50,13 @@ public class ArrayMain08 {
 		// 분산(deviation) = ( (x_0 -avg)^2 + (x_1 -avg)^2 + ...) / N = 데이터들이 평균에서 떨어져 있는 정도		
 		for (int s : scores) {
 			dev = s - avg;
-			devSqvSum += Math.pow(dev, 2); 
+			sumOfSquares += Math.pow(dev, 2); 
 		}
 //		for (int i = 0; i < scores.length; i++) {
 //			dev = scores[i] - avg;  
-//			devSqvSum += Math.pow(dev, 2); 
+//			sumOfSquares += Math.pow(dev, 2); 
 //		}
-		var = devSqvSum / scores.length;  
+		var = sumOfSquares / scores.length;  
 		std = Math.sqrt(var);  
 		System.out.println("표준편차: " + std);
 		

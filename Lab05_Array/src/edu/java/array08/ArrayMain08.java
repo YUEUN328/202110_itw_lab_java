@@ -16,7 +16,7 @@ public class ArrayMain08 {
 		double dev;  // 편차
 		double sumOfSquares = 0.0;  // 편차제곱합
 		double var;  // 분산
-		double std;  // 표준편차
+		double stdDev;  // 표준편차
 		int max;  // 최댓값
 		int min;  // 최솟값
 		
@@ -57,8 +57,8 @@ public class ArrayMain08 {
 //			sumOfSquares += Math.pow(dev, 2); 
 //		}
 		var = sumOfSquares / scores.length;  
-		std = Math.sqrt(var);  
-		System.out.println("표준편차: " + std);
+		stdDev = Math.sqrt(var);  
+		System.out.println("표준편차: " + stdDev);
 		
 		// 최댓값을 찾아서 출력
 		max = scores[0];  // 배열의 첫 번째 원소를 최댓값이라고 가정

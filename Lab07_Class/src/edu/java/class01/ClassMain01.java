@@ -38,6 +38,15 @@ public class ClassMain01 {
 		// 채널 감소
 		tv1.channelDown();
 		
+		for (int i = 0; i < 6; i++) {
+			tv1.volumeUp();
+			tv1.channelUp();
+		}
+		for (int i = 0; i < 6; i++) {
+			tv1.volumeDown();
+			tv1.channelDown();
+		}
+		
 		// TV 끔
 		tv1.powerOnOff();
 		

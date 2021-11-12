@@ -3,21 +3,23 @@ package edu.java.class03;
 public class ClassMain03 {
 
 	public static void main(String[] args) {
-		Rectangle r1 = new Rectangle();
-		System.out.println(r1.width);
-		System.out.println(r1.height);
+		// Rectangle 클래스의 인스턴스를 생성
+		// defalut constructor를 사용해서 인스턴스를 생성
+		Rectangle rect1 = new Rectangle();
+		System.out.println("--- rect1 ---");
+		rect1.info();
 		
-		Rectangle r2 = new Rectangle(3);
-		System.out.println(r2.width);
-		System.out.println(r2.height);
-		System.out.println(r2.area());
-		System.out.println(r2.perimeter());
-
-		Rectangle r3 = new Rectangle(4, 5);
-		System.out.println(r3.width);
-		System.out.println(r3.height);
-		System.out.println(r3.area());
-		System.out.println(r3.perimeter());
+		System.out.println();
+		// 파라미터(매개변수)가 1개인 생성자를 사용해서 인스턴스를 생성
+		Rectangle rect2 = new Rectangle(5.0);
+		System.out.println("--- rect2 ---");
+		rect2.info();
+		
+		System.out.println();
+		// 파라미터가 2개인 생성자를 사용해서 인스턴스를 생성
+		Rectangle rect3 = new Rectangle(3.0, 4.0);
+		System.out.println("--- rect3 ---");
+		rect3.info();
 		
 	}
 

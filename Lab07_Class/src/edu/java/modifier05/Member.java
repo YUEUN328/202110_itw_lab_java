@@ -12,17 +12,19 @@ public class Member {
 	}
 	
 	// 아이디와 비밀번호에 대한 getter(읽기) 메서드 작성
-	public String getId() {
+	// getter: 필드(멤버 변수)의 값을 리턴하는 메서드
+	public String getMemberId() {
 		return memberId;
 	}
 	
-	public String getPassword() {
+	public String getMemberPassword() {
 		return memberPassword;
 	}
 	
 	
 	// 비밀번호에 대한 setter 메서드 작성
-	public void setPassword(String memberPassword) {
+	// setter: 필드(멤버 변수)의 값을 설정(변경)하는 메서드
+	public void setMemberPassword(String memberPassword) {
 		this.memberPassword = memberPassword;
 	}
 

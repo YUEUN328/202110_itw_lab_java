@@ -41,8 +41,10 @@ public class Contact {
 		this.email = email;
 	}
 	
+	// System.out.println(객체) 메서드의 출력문에서 참조값(@...) 대신에 원하는 문자열로 출력하기 위해서
+	@Override
 	public String toString() {
 		return "Contact{name:" + name + ", phone:" + phone + ", email:" + email + "}";
 	}
 	
-}
+}  // end class Contact

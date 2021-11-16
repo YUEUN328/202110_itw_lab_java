@@ -14,7 +14,7 @@ public class Captain {
 	// static의 목적: 객체(인스턴스)가 생성되지 않아도 호출할 수 있도록
 	public static Captain getInstance() {
 		if (instance == null) {
-			instance = new Captain();  // private 생성자는 같은 클래스 내부네서만 호출 가능
+			instance = new Captain();  // private 생성자는 같은 클래스 내부에서만 호출 가능
 		}
 		
 		return instance;

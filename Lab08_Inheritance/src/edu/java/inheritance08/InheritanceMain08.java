@@ -44,8 +44,7 @@ class Dog extends Animal {
 
 	public Dog() {
 		// super 클랫가 기본 생성자를 갖고 있지 않기 때문에, 파라미터를 갖는 생성자를 명시적으로 호출해야 함
-		super("강아지");
-		
+		super("강아지");		
 	}
 
 	// 추상 클래스인 부모로부터 상속받은 추상 메서드를 구현(implement)해야 abstract가 아닌 클래스가 될 수 있음

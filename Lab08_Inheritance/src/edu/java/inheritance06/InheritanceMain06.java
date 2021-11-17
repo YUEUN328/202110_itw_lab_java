@@ -27,6 +27,9 @@ public class InheritanceMain06 {
 		// Object 클래스의 equals() 메서드는 원래 hashCode() 값으로 같은지 다른지 비교를 하고 있었지만, 
 		// Point 클래스에서 override한 equals() 메서드는 멤버 변수(필드) x, y 값으로 같은지 다른지를 비교함
 		System.out.println("equals 메서드: " + pt1.equals(pt2));
+		
+		// Object 클래스의 hashCode() 메서드는 인스턴스가 생성된 메모리 주소값을 리턴하고 있었지만, 
+		// Point 클래스에서 override한 hashCode() 메서드는 equals()가 true일 때 같은 정수 값이 되도록 구현
 		System.out.println(pt1.hashCode());
 		System.out.println(pt2.hashCode());
 		
@@ -36,6 +39,15 @@ public class InheritanceMain06 {
 		System.out.println(pt3);
 		System.out.println(pt1.equals(pt3)); // -> false
 		System.out.println(pt3.hashCode());
+		
+		System.out.println();
+		// 문자열 비교
+		String str1 = new String("자바 어렵나요?");
+		String str2 = new String("자바 어렵나요?");
+		System.out.println(str1 == str2); // 주소값 비교 -> false
+		System.out.println(str1.equals(str2)); // 문자열 내용 비교 -> true
+		// 기본 타입(boolean, int, doublel, ...)의 같음/다름 비교는 ==, != 연산자를 사용
+		// 참조 타입(String, Object, ...)의 같음/다름 비교는 equals() 메서드를 사용
 		
 	} // end main()
 

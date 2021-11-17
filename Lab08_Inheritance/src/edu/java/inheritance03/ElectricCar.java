@@ -24,5 +24,13 @@ public class ElectricCar extends Car {
 		super.drive();  // 상위 클래스의 drive() 메서드를 명시적(explicit)으로 호출
 		System.out.println("배터리 충전량=" + charge);
 	}
+	
+	public int getCharge() {
+		return charge;
+	}
+	
+	public void setCharge(int charge) {
+		this.charge = charge;
+	}
 
 }

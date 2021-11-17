@@ -21,8 +21,6 @@ public class InheritanceMain08 {
 		
 		Animal fish = new Fish();
 		fish.move();
-	
-
 	}
 
 } // end class InheritanceMain08

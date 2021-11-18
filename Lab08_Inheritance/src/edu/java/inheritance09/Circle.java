@@ -6,11 +6,10 @@ public class Circle extends Shape {
 
 	// constructor
 	public Circle(double radius) {
-		super("원");
+		super("동그라미");
 		this.radius = radius;
 	}
-
-	// 구현 
+ 
 	@Override
 	public double area() {
 		return Math.PI * Math.pow(radius, 2);

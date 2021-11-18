@@ -15,7 +15,8 @@ public abstract class Shape {
 	
 	// final method
 	public final void draw() {
-		String result = type + "(넓이:" + area() + ", 둘레:" + perimeter();
+		String result = type + "(넓이:" + area() + ", 둘레:" + perimeter() + ")";
 		System.out.println(result);
 	}
+	
 }

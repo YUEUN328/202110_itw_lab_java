@@ -52,7 +52,6 @@ public class WrapperMain01 {
 		String s2 = sc.nextLine();
 		System.out.println(s2);
 		
-
 	}
 
 }

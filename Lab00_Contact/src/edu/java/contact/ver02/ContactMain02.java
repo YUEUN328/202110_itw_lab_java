@@ -46,7 +46,7 @@ public class ContactMain02 {
 
 	private static void updateContactInfo() {
 		System.out.println();
-		System.out.println("----- 연락처 정보 수정 -----");
+		System.out.println("--- 연락처 정보 수정 ---");
 		System.out.println("수정할 인덱스>>");
 		String s = scanner.nextLine();
 		int index = Integer.parseInt(s);

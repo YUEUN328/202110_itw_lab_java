@@ -16,7 +16,7 @@ public class ExceptionMain08 {
 		
 		System.out.println();
 		try {
-			System.out.println(calc.divide3(123, 10));
+			System.out.println(calc.divide3(123, 0));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -48,9 +48,9 @@ class Calculator {
 	// 메서드 divide3은 Exception 클래스의 객체(인스턴스)를 던질 수 있다
 	public int divide3(int x, int y) throws Exception {
 		if (y == 0) {
-			throw new Exception("0으로 나누는 예외");
-//			Exception e = new Exception("0으로 나누는 예외"); // Exception 클래스의 객체 생성
-//			throw e; // throw: (메서드를 호출한 곳으로) 예외 객체를 던짐
+			Exception e = new Exception("0으로 나누는 예외"); // Exception 클래스의 객체 생성
+			throw e; // throw: (메서드를 호출한 곳으로) 예외 객체를 던짐
+//			throw new Exception("0으로 나누는 예외");
 		}
 		
 		return x / y; // return: (메서드를 호출한 곳으로) 값을 반환 & 메서드를 종료

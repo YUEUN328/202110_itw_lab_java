@@ -75,7 +75,7 @@ class Point {
 	@Override
 	public boolean equals(Object obj) {
 		boolean result = false;
-		if (obj instanceof Point) { // 파라미터 obj가 Point 타압의 인스턴스이면
+		if (obj instanceof Point) { // 파라미터 obj가 Point 타입의 인스턴스이면
 			Point other = (Point) obj;
 			if(this.x == other.x && this.y == other.y) {
 				result = true;

@@ -19,7 +19,7 @@ import java.util.TreeSet;
 public class SetMain01 {
 
 	public static void main(String[] args) {
-		// String을 저장하느 TreeSet을 생성
+		// String을 저장하는 TreeSet을 생성
 		Set<String> set = new TreeSet<>();
 		// 변수를 선언할 때 Set이 저장하는 원소 타입을 생략할 순 없지만,
 		// 생성자를 호출할 때는 원소 타입을 생략할 수 있음

@@ -27,8 +27,7 @@ public class SetMain01 {
 		System.out.println("size: " + set.size());
 		System.out.println(set);
 
-		// List<E>는 add(Object), remove(int), remove(Object), get(int), set(int, Object)
-		// 메서드를 가지고 있지만,
+		// List<E>는 add(Object), remove(int), remove(Object), get(int), set(int, Object) 메서드를 가지고 있지만,
 		// Set<E>은 add(Object), remove(Object) 메서드만 가지고 있음. 인덱스(int)를 이용하는 메서드는 없음
 
 		// Set<E>에 원소 추가 - add

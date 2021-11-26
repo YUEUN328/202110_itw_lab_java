@@ -12,7 +12,7 @@ public class ContactDaoImpl implements ContactDao {
 	private static ContactDaoImpl instance = null;
 	
 	// 생성자를 private으로 선언
-	private ContactDaoImpl () {}
+	private ContactDaoImpl() {}
 	
 	// 생성자 대신에 인스턴스를 생성할 수 있는 public static 메서드를 제공
 	public static ContactDaoImpl getInstance () {

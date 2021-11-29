@@ -2,6 +2,7 @@ package edu.java.contact.ver03;
 
 import static edu.java.contact.menu.MainMenu.*;
 
+import java.util.List;
 import java.util.Scanner;
 
 import edu.java.contact.model.Contact;
@@ -115,7 +116,8 @@ public class ContactMain03 {
 	private static void selectAllContacts() {
 		System.out.println();
 		System.out.println("--- 연락처 전체 리스트 ---");
-		System.out.println(dao.select());
+		List<Contact> contactList = dao.select();
+		System.out.println(contactList);
 		System.out.println("--------------------------");
 	}
 

@@ -24,9 +24,13 @@ public class FileMain02 {
 				if (result == -1) { // 파일에서 더이상 읽을 데이터가 없을 때(파일 끝)
 					break; // 무한 루프 종료
 				}
-//				System.out.println(result + "바이트 읽음.");
-				out.write(buffer); // 파일에 20바이트씩 쓰기(write)
-				// 읽은 바이트만큼 쓰기
+				System.out.println(result + "바이트 읽음.");
+//				out.write(buffer); // 파일에 20바이트씩 쓰기(write)
+				// write(byte[] b, int off, int len) -> 읽은 바이트만큼 쓰기
+				//   - byte[] b: 파일 쓸 데이터가 저장된 배열
+				//   - int off: 배열 b에서 몇 번째 인덱스부터 쓰기 시작할 것인지(offset)
+				//   - int len: off부터 시작해서 몇 바이트를 쓸 것인지
+				out.write(buffer, 0, result);
 			}
 			System.out.println("파일 복사 성공!");
 

@@ -5,7 +5,7 @@ import java.io.Serializable;
 // Object 타입으로 파일에 write하거나, 파일에서 read를 하려면
 // 그 클래스는 Serializable 인터페이스를 구현해야 함 -> "직렬화"가 가능하다는 선언
 // Serializable은 구현해야 할 추상 메서드는 없음
-public class Product implements Serializable{
+public class Product implements Serializable {
 	// field
 	private int productId; // 상품 번호
 	private String productName; // 상품 이름

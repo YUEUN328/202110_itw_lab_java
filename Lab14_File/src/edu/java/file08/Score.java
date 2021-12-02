@@ -2,7 +2,7 @@ package edu.java.file08;
 
 import java.io.Serializable;
 
-public class Score implements Serializable{
+public class Score implements Serializable {
 	// field
 	private int korean;
 	private int english;

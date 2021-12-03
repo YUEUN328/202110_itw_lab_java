@@ -19,7 +19,7 @@ public class LambdaMain02 {
 			public double calc(double x, double y) {
 				double result = 0;
 				if (x > y) {
-					result = x -y;
+					result = x - y;
 				} else {
 					result = y - x;
 				}

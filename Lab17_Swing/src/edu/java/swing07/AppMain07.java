@@ -88,7 +88,7 @@ public class AppMain07 {
 		frame.getContentPane().add(textArea);
 	}
 
-	protected void showInfo() {
+	private void showInfo() {
 		String id = textId.getText();
 		String pwd = "";	
 		char[] secretPwd = passwordField.getPassword();

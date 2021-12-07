@@ -90,7 +90,7 @@ public class AppMain05 {
 		frame.getContentPane().add(btnNext);
 	} // end initialize()
 
-	protected void showPrevImage() {
+	private void showPrevImage() {
 		// 현재 인덱스(index)가 0보다 크면
 		if (index > 0) {
 			index--; // 인덱스 감소

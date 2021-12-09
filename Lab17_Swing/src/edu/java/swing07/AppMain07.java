@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -107,12 +109,12 @@ public class AppMain07 {
 //		String result = "ID: " + id + "\n + "PW: " + pw;
 		char[] pw = passwordField.getPassword();
 		
-//		if (id.equals("")) {
-//			System.out.println("아이디 입력 안 됨");
-//		}
-//		if (pw.length == 0) {
-//			System.out.println("비밀번호 입력 안 됨");
-//		}
+		if (id.equals("")) {
+			JOptionPane.showMessageDialog(frame, "아이디 입력 안 됨.");
+		}
+		if (pw.length == 0) {
+			JOptionPane.showMessageDialog(frame, "비밀번호 입력 안 됨.");
+		}
 		
 		StringBuffer result = new StringBuffer();
 		result.append("ID: ").append(id).append("\n")

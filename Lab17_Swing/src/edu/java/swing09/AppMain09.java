@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import java.awt.Font;
+
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -12,12 +14,13 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
+import java.util.Enumeration;
 import java.awt.event.ActionEvent;
 
 public class AppMain09 {
-	
+
 	// JComboBox의 아이템으로 사용하기 위한 문자열 배열을 정의
-	private static final String[] ITEMS = {"Facebook", "Instagram", "Youtube"};
+	private static final String[] ITEMS = { "Facebook", "Instagram", "Youtube" };
 
 	private JFrame frame;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
@@ -63,7 +66,7 @@ public class AppMain09 {
 		frame.setBounds(100, 100, 562, 429);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		rbPrivate = new JRadioButton("private");
 		rbPrivate.addActionListener(new ActionListener() {
 			@Override
@@ -75,7 +78,7 @@ public class AppMain09 {
 		rbPrivate.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		rbPrivate.setBounds(8, 6, 122, 37);
 		frame.getContentPane().add(rbPrivate);
-		
+
 		rbPackage = new JRadioButton("package");
 		rbPackage.addActionListener(new ActionListener() {
 			@Override
@@ -87,7 +90,7 @@ public class AppMain09 {
 		rbPackage.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		rbPackage.setBounds(134, 6, 122, 37);
 		frame.getContentPane().add(rbPackage);
-		
+
 		rbProtected = new JRadioButton("protected");
 		rbProtected.addActionListener(new ActionListener() {
 			@Override
@@ -99,7 +102,7 @@ public class AppMain09 {
 		rbProtected.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		rbProtected.setBounds(260, 6, 141, 37);
 		frame.getContentPane().add(rbProtected);
-		
+
 		rbPublic = new JRadioButton("public");
 		rbPublic.setSelected(true);
 		rbPublic.addActionListener(new ActionListener() {
@@ -112,7 +115,7 @@ public class AppMain09 {
 		rbPublic.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		rbPublic.setBounds(416, 6, 122, 37);
 		frame.getContentPane().add(rbPublic);
-		
+
 		cbAbstract = new JCheckBox("abstract");
 		cbAbstract.addActionListener(new ActionListener() {
 			@Override
@@ -123,7 +126,7 @@ public class AppMain09 {
 		cbAbstract.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		cbAbstract.setBounds(8, 67, 122, 37);
 		frame.getContentPane().add(cbAbstract);
-		
+
 		cbStatic = new JCheckBox("static");
 		cbStatic.addActionListener(new ActionListener() {
 			@Override
@@ -134,7 +137,7 @@ public class AppMain09 {
 		cbStatic.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		cbStatic.setBounds(134, 67, 122, 37);
 		frame.getContentPane().add(cbStatic);
-		
+
 		cbFinal = new JCheckBox("final");
 		cbFinal.addActionListener(new ActionListener() {
 			@Override
@@ -145,7 +148,7 @@ public class AppMain09 {
 		cbFinal.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		cbFinal.setBounds(260, 67, 122, 37);
 		frame.getContentPane().add(cbFinal);
-		
+
 		comboBox = new JComboBox<>();
 		comboBox.addActionListener(new ActionListener() {
 			@Override
@@ -155,16 +158,16 @@ public class AppMain09 {
 				textArea.setText(selected + " 선택됨.");
 			}
 		});
-		
+
 		// ComboBoxModel: 콤보박스에서 보여질 아이템들을 가지고 있는 객체
 		DefaultComboBoxModel<String> comboModel = new DefaultComboBoxModel<>(ITEMS);
 		// 콤보박스에 ComboBoxModel 객체를 설정 -> 선택할 수 있는 리스트(아이템)가 설정됨
 		comboBox.setModel(comboModel);
-		
+
 		comboBox.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		comboBox.setBounds(12, 124, 135, 37);
 		frame.getContentPane().add(comboBox);
-		
+
 		btnConfirm = new JButton("확인");
 		btnConfirm.addActionListener(new ActionListener() {
 			@Override
@@ -175,7 +178,7 @@ public class AppMain09 {
 		btnConfirm.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		btnConfirm.setBounds(12, 183, 135, 37);
 		frame.getContentPane().add(btnConfirm);
-		
+
 		textArea = new JTextArea();
 		textArea.setFont(new Font("D2Coding", Font.PLAIN, 24));
 		textArea.setBounds(12, 230, 522, 150);
@@ -183,7 +186,7 @@ public class AppMain09 {
 	}
 
 	private void showInfo() {
-		StringBuffer buffer = new StringBuffer();		
+		StringBuffer buffer = new StringBuffer();
 		
 		// 라디오버튼들 중에서 선택된 상태
 		if (rbPrivate.isSelected()) {
@@ -196,7 +199,15 @@ public class AppMain09 {
 			buffer.append(rbPublic.getText());
 		}
 		buffer.append(" 라디오버튼 선택.\n");
-	
+		
+//		Enumeration<AbstractButton> elements = buttonGroup.getElements();
+//		for (; elements.hasMoreElements();) {
+//			AbstractButton btn = elements.nextElement();
+//			if (btn.isSelected()) {
+//				buffer.append(btn.getText()).append(" 라디오버튼 선택.\n");
+//			}
+//		}
+
 		// 체크박스 선택 상태
 		if (cbAbstract.isSelected()) {
 			buffer.append(cbAbstract.getText()).append(" 체크박스 선택.\n");
@@ -207,11 +218,11 @@ public class AppMain09 {
 		if (cbFinal.isSelected()) {
 			buffer.append(cbFinal.getText()).append(" 체크박스 선택.\n");
 		}
-		
+
 		// 콤보박스 선택 상태
 		String item = (String) comboBox.getSelectedItem();
 		buffer.append(item).append(" 콤보박스 아이템 선택.");
-		
+
 		textArea.setText(buffer.toString());
 	}
 
@@ -220,13 +231,13 @@ public class AppMain09 {
 		// instanceof 연산자를 사용하면 더 안전하게 casting할 수 있음
 		JCheckBox chkBox = (JCheckBox) e.getSource();
 		boolean selected = chkBox.isSelected();
-		
+
 		textArea.setText(cmd + " 체크박스 선택여부: " + selected);
 	}
 
 	private void showRadioButtonStatus(ActionEvent e) {
 		String cmd = e.getActionCommand();
 //		Object source = e.getSource(); // 이벤트가 발생한 컴포넌트 객체
-		textArea.setText(cmd + " 라디오버튼 선택됨."); 
+		textArea.setText(cmd + " 라디오버튼 선택됨.");
 	}
 }

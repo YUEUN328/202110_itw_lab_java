@@ -2,7 +2,7 @@ package edu.java.contact.model;
 
 import java.io.Serializable;
 
-// 연락처 프로그램에서 사용할 데이터 객체
+// 연락처 프로그램에서 사용할 데이터 객체 - Model, VO(Value Object), DTO(Data Transfer Object)
 public class Contact implements Serializable {
 	// field
 	private String name;

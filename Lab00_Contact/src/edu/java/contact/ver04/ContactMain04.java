@@ -159,4 +159,4 @@ public class ContactMain04 {
 		System.out.println("선택>>");
 	}
 
-} // end class ContactMain03
+} // end class ContactMain04

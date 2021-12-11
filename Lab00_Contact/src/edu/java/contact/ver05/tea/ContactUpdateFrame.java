@@ -26,7 +26,7 @@ public class ContactUpdateFrame extends JFrame {
 	private JTextField textPhone;
 	private JTextField textEmail;
 
-	private Component parentComponent; // 업데이트 프레일을 보여주기 위한 부모 컴포넌트
+	private Component parentComponent; // 업데이트 프레임을 보여주기 위한 부모 컴포넌트
 	private int index; // 수정할 연락처의 인덱스
 	private ContactDao dao;
 	private ContactMain05 mainApp;

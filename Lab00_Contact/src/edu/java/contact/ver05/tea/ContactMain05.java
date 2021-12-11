@@ -117,7 +117,7 @@ public class ContactMain05 {
 	} // end initialize()
 	
 	private void loadContactData() {
-		// data/contacts.dat  파일에서 데이터를 읽어서 JTable에 데이터를 추가(JTable의 model을 변경)
+		// data/contacts.dat 파일에서 데이터를 읽어서 JTable에 데이터를 추가(JTable의 model을 변경)
 		List<Contact> contacts = dao.select();
 		for (Contact c : contacts) {
 			addContactToTableModel(c);
@@ -131,7 +131,7 @@ public class ContactMain05 {
 		
 	} // end addContactToTableModel()
 
-	public void insertConcat(Contact c) {
+	public void insertContact(Contact c) {
 		// 파일에 쓰기
 		int result = dao.insert(c);
 		if (result == 1) {
@@ -145,7 +145,7 @@ public class ContactMain05 {
 	} // end insertContact()
 
 	private void deleteContact() {
-		// 테이블에서 선택된 행(row)가 있는 지 검사
+		// 테이블에서 선택된 행(row)이 있는지 검사
 		int row = table.getSelectedRow();
 		if (row == -1) {
 			JOptionPane.showMessageDialog(
